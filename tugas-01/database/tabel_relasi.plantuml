@@ -1,0 +1,20 @@
+@startuml
+
+entity Mahasiswa {
+  * nim VARCHAR(10) <<FK>>
+  ---
+  * nama VARCHAR(100)
+  * jenis_kelamin ENUM('l','p')
+  email VARCHAR(100)
+  no_telp VARCHAR(15)
+  ---
+  * kode_jenjang VARCHAR(5) <<PK>>
+  * kode_jurusan VARCHAR(5) <<PK>>
+}
+
+entity Jurusan {
+  * kode VARCHAR(5) <<PK>>
+
+}
+
+@enduml
