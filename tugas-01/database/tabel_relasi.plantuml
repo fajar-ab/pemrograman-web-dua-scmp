@@ -14,7 +14,10 @@ entity Mahasiswa {
 
 entity Jurusan {
   * kode VARCHAR(5) <<PK>>
-
+  --
+  * nama VARCHAR(100)
 }
+
+Mahasiswa }|--|| Jurusan
 
 @enduml
