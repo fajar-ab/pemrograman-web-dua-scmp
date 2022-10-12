@@ -10,6 +10,13 @@ entity Mahasiswa {
   ---
   * kode_jenjang VARCHAR(5) <<PK>>
   * kode_jurusan VARCHAR(5) <<PK>>
+  * id_pekerjaan INT(3) <<PK>>
+}
+
+entity Jenjang {
+  * kode VARCHAR(5) <<PK>>
+  --
+  * nama VARCHAR(100)
 }
 
 entity Jurusan {
@@ -18,6 +25,15 @@ entity Jurusan {
   * nama VARCHAR(100)
 }
 
+
+entity Pekerjaan {
+  * kode INT(3) <<PK>>
+  --
+  * nama VARCHAR(100)
+}
+
+Mahasiswa }|--|| Jenjang
 Mahasiswa }|--|| Jurusan
+Mahasiswa }|--|| Pekerjaan
 
 @enduml
