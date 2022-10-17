@@ -19,7 +19,7 @@ class JurusanRepository
   public function selectAllWithMahasiswa(string $nim)
   {
     $query = <<<___SQL
-    SELECT mhs.nim, jurusan.*
+    SELECT NVL2(mhs.kode_jurusan, "selected", NULL) AS option, jurusan.*
     FROM (
         SELECT *
         FROM mahasiswa

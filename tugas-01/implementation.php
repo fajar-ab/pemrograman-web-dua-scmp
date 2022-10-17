@@ -18,7 +18,7 @@ $mahasiswa = (new MahasiswaBuilder)
   ->setKodeJenjang("S1")
   ->setKodeJurusan("SI")
   ->setIdPekerjaan(1)
-  ->buid();
+  ->build();
 
 $mahasiswaDao = new MahasiswaRepository(Database::getConnection());
 

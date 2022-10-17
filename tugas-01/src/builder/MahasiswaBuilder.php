@@ -111,7 +111,7 @@ class MahasiswaBuilder
     return $this;
   }
 
-  public function buid(): Mahasiswa
+  public function build(): Mahasiswa
   {
     return new Mahasiswa(
       $this->nim,
