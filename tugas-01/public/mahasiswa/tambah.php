@@ -21,18 +21,18 @@ function clearInput($value)
 
 if (isset($_POST["submit"])) {
 
-  // $mahasiswa = (new MahasiswaBuilder)
-  //   ->setNim(clearInput($_POST["nim"]))
-  //   ->setNama(clearInput($_POST["nama"]))
-  //   ->setJenisKelamin(clearInput($_POST["jenis_kelamin"]))
-  //   ->setEmail(clearInput($_POST["email"]))
-  //   ->setNomorTelpon(clearInput($_POST["no_telp"]))
-  //   ->setKodeJenjang(clearInput($_POST["kode_jenjang"]))
-  //   ->setKodeJurusan(clearInput($_POST["kode_jurusan"]))
-  //   ->setIdPekerjaan((int) clearInput($_POST["id_pekerjaan"]))
-  //   ->build();
+  $mahasiswa = (new MahasiswaBuilder)
+    ->setNim(clearInput($_POST["nim"]))
+    ->setNama(clearInput($_POST["nama"]))
+    ->setJenisKelamin(clearInput($_POST["jenis_kelamin"]))
+    ->setEmail(clearInput($_POST["email"]))
+    ->setNomorTelpon(clearInput($_POST["no_telp"]))
+    ->setKodeJenjang(clearInput($_POST["kode_jenjang"]))
+    ->setKodeJurusan(clearInput($_POST["kode_jurusan"]))
+    ->setIdPekerjaan((int) clearInput($_POST["id_pekerjaan"]))
+    ->build();
 
-  // $mahasiswaDao->insert($mahasiswa);
+  $result = $mahasiswaDao->insert($mahasiswa);
 
   if ($result) {
     header("Location: index.php");
