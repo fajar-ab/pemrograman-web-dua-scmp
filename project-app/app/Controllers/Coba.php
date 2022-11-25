@@ -14,6 +14,9 @@ class Coba extends BaseController
 
     public function about($nama = "", $umur = 0)
     {
-        echo "<h1>Hello nama saya $nama, umur saya $umur";
+        return view("coba", [
+            "nama" => $nama,
+            "umur" => $umur
+        ]);
     }
 }
