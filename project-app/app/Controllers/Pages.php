@@ -8,22 +8,36 @@ class Pages extends BaseController
 {
     public function index()
     {
-        echo view("components/header", ["title" => "Home"]);
-        echo view("pages/index");
-        echo view("components/footer");
+        return view("pages/index", ["title" => "Home",]);
     }
 
     public function about($nama = "", $umur = 0)
     {
+
         $data = [
             "title" => "About",
             "nama" => $nama,
             "umur" => $umur
         ];
 
+        return view("pages/about", $data);
+    }
 
-        echo view("components/header", $data);
-        echo view("pages/about", $data);
-        echo view("components/footer");
+    public function contact()
+    {
+
+        $data = [
+            "title" => "Contact",
+            "contacts" => [
+                [
+                    "nama" => "Sundari Sukoco",
+                    "alamat" => "Jl. Abdul Haris Nasution, Desa Ujung Gurap, Kecamatan Padangsidimpuan Batunadua",
+                    "kota" => "Padangsidimpuan",
+                    "no_hp" => "+6282899393928"
+                ]
+            ]
+        ];
+
+        return view("pages/contact", $data);
     }
 }
