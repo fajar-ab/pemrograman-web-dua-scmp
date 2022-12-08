@@ -30,11 +30,29 @@ class Pages extends BaseController
             "title" => "Contact",
             "contacts" => [
                 [
-                    "nama" => "Sundari Sukoco",
-                    "alamat" => "Jl. Abdul Haris Nasution, Desa Ujung Gurap, Kecamatan Padangsidimpuan Batunadua",
-                    "kota" => "Padangsidimpuan",
-                    "no_hp" => "+6282899393928"
-                ]
+                    "nama" => "Fajar Fadilah",
+                    "alamat" => "Jalan Simagambat Sipagimbar, Sidapdap, Kecamatan Saipar Dolok Hole",
+                    "kota" => "Sipirok",
+                    "no_hp" => "+6281263254455"
+                ],
+                [
+                    "nama" => "Agus Setiawan",
+                    "alamat" => "Jalan Simagambat Sipagimbar, Sipagimbar, Kecamatan Saipar Dolok Hole",
+                    "kota" => "Sipirok",
+                    "no_hp" => "+6281263234343"
+                ],
+                [
+                    "nama" => "Dimas Syuhada",
+                    "alamat" => "Jalan Simagambat Sipagimbar, Simanosor, Kecamatan Saipar Dolok Hole",
+                    "kota" => "Sipirok",
+                    "no_hp" => "+6281263253829"
+                ],
+                [
+                    "nama" => "Anisa Aulua",
+                    "alamat" => "Jalan Merdeka, Binjai Utara",
+                    "kota" => "Binjai",
+                    "no_hp" => "+628126388323"
+                ],
             ]
         ];
 
