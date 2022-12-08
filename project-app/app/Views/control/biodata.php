@@ -20,13 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link <?= $menu_id === 1 ? "active" : "" ?>" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/biodata/fajar/21">Biodata</a>
+            <a class="nav-link <?= $menu_id === 2 ? "active" : "" ?>" href="/control/biodata/fajar/21">Biodata</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link <?= $menu_id === 3 ? "active" : "" ?>" href="/control/contact">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +50,9 @@
 
   <!-- content -->
 
-  <h1>Home</h1>
+  <div class="container">
+    <h1><?= "Hello nama saya $nama, umur saya $umur" ?></h1>
+  </div>
 
 
   <!-- content -->
