@@ -12,10 +12,7 @@ class Control extends BaseController
             "menu_id" => 1
         ];
 
-
-        echo view("layouts/header", $data);
-        echo view("pages/index");
-        echo view("layouts/footer");
+        return view("pages/index", $data);
     }
 
     public function biodata($nama = "", $umur = 0)
@@ -27,9 +24,7 @@ class Control extends BaseController
             "umur" => $umur
         ];
 
-        echo view("layouts/header", $data);
-        echo view("pages/biodata", $data);
-        echo view("layouts/footer");
+        return view("pages/biodata", $data);
     }
 
     public function contact()
@@ -65,8 +60,6 @@ class Control extends BaseController
             ]
         ];
 
-        echo view("layouts/header", $data);
-        echo view("pages/contact", $data);
-        echo view("layouts/footer");
+        return view("pages/contact", $data);
     }
 }

@@ -1,5 +1,7 @@
-<!-- content -->
+<?= $this->extend("layouts/template") ?>
+<?= $this->section("content") ?>
 
+<!-- content -->
 <div class="container">
   <h1>Contact</h1>
 
@@ -24,5 +26,6 @@
     </tbody>
   </table>
 </div>
-
 <!-- content -->
+
+<?= $this->endSection() ?>
