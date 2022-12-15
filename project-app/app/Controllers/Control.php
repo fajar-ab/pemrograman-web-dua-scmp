@@ -12,10 +12,7 @@ class Control extends BaseController
             "menu_id" => 1
         ];
 
-
-        echo view("layouts/header", $data);
-        echo view("pages/index");
-        echo view("layouts/footer");
+        return view("pages/index", $data);
     }
 
     public function biodata($nama = "", $umur = 0)
