@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use Faker\Factory;
 
 class Control extends BaseController
 {
@@ -29,35 +30,21 @@ class Control extends BaseController
 
     public function contact()
     {
+        $faker = Factory::create("id_ID");
+
+        $contactDummy = [];
+        for ($i = 0; $i < 10; $i++) {
+            $contactDummy[] = [
+                "nama" => $faker->name(),
+                "alamat" => $faker->address(),
+                "kota" => $faker->city(),
+                "no_hp" => $faker->phoneNumber(),
+            ];
+        }
 
         $data = [
             "menu_id" => 3,
-            "contacts" => [
-                [
-                    "nama" => "Fajar Fadilah",
-                    "alamat" => "Jalan Simagambat Sipagimbar, Sidapdap, Kecamatan Saipar Dolok Hole",
-                    "kota" => "Sipirok",
-                    "no_hp" => "+6281263254455"
-                ],
-                [
-                    "nama" => "Agus Setiawan",
-                    "alamat" => "Jalan Simagambat Sipagimbar, Sipagimbar, Kecamatan Saipar Dolok Hole",
-                    "kota" => "Sipirok",
-                    "no_hp" => "+6281263234343"
-                ],
-                [
-                    "nama" => "Dimas Syuhada",
-                    "alamat" => "Jalan Simagambat Sipagimbar, Simanosor, Kecamatan Saipar Dolok Hole",
-                    "kota" => "Sipirok",
-                    "no_hp" => "+6281263253829"
-                ],
-                [
-                    "nama" => "Anisa Aulua",
-                    "alamat" => "Jalan Merdeka, Binjai Utara",
-                    "kota" => "Binjai",
-                    "no_hp" => "+628126388323"
-                ],
-            ]
+            "contacts" => $contactDummy
         ];
 
         return view("pages/contact", $data);
